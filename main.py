@@ -50,24 +50,24 @@
 # 3. Користувач вводить два числа та матем дію: + - * або /.
 # Залежно від введеної матем дії вивести результат.
 
-try:
-    num1 = float(input("Please, enter a nuber 1: "))
-    num2 = float(input("Please, enter a number 2: "))
-    symbol = str(input("Enter, a symbol \"+\",\"-\",\"*\",\"/\": "))
-    match symbol:
-        case '+':
-            print("Result = " + str(num1 + num2))
-        case '-':
-            print("Result = " + str(num1 - num2))
-        case '*':
-            print("Result = " + str(num1 * num2))
-        case '/':
-            print("Result = " + str(num1 / num2))
-        case _:
-            print("Invalid input symbol!")
-except ZeroDivisionError as error:
-    print(f"ZeroDivisionError: {error}")
-except ValueError as error:
-    print(f'ValueError occurred :{error}')
-except Exception as error:
-    print(f"ExceptionError: {error}")
+# try:
+#     num1 = float(input("Please, enter a nuber 1: "))
+#     num2 = float(input("Please, enter a number 2: "))
+#     symbol = str(input("Enter, a symbol \"+\",\"-\",\"*\",\"/\": "))
+#     match symbol:
+#         case '+':
+#             print("Result = " + str(num1 + num2))
+#         case '-':
+#             print("Result = " + str(num1 - num2))
+#         case '*':
+#             print("Result = " + str(num1 * num2))
+#         case '/':
+#             print("Result = " + str(num1 / num2))
+#         case _:
+#             print("Invalid input symbol!")
+# except ZeroDivisionError as error:
+#     print(f"ZeroDivisionError: {error}")
+# except ValueError as error:
+#     print(f'ValueError occurred :{error}')
+# except Exception as error:
+#     print(f"ExceptionError: {error}")
