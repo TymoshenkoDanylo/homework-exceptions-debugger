@@ -25,24 +25,49 @@
 #     print(f"ExceptionError: {error}")
 
 
-# 2. Користувач вводить два числа.
-# Визначити, чи рівні ці числа, і, якщо ні, вивести їх на екран у порядку зростання.
+# # 2. Користувач вводить два числа.
+# # Визначити, чи рівні ці числа, і, якщо ні, вивести їх на екран у порядку зростання.
+#
+# try:
+#     while True:
+#         try:
+#             number1 = int(input("Please, input a number 1: "))
+#             number2 = int(input("Please, input a number 2: "))
+#             if number1 == number2:
+#                 print("Yes, these numbers are equal!")
+#             elif number1 < number2:
+#                 print(f"{number1},\t{number2}")
+#                 break
+#             else:
+#                 print(f"{number2},\t{number1}")
+#                 break
+#         except ValueError as error:
+#             print(f"ValueError occurred:{error}")
+#             print("Please retry the operation!")
+# except Exception as error:
+#     print(f"ExceptionError: {error}")
+
+# 3. Користувач вводить два числа та матем дію: + - * або /.
+# Залежно від введеної матем дії вивести результат.
 
 try:
-    while True:
-        try:
-            number1 = int(input("Please, input a number 1: "))
-            number2 = int(input("Please, input a number 2: "))
-            if number1 == number2:
-                print("Yes, these numbers are equal!")
-            elif number1 < number2:
-                print(f"{number1},\t{number2}")
-                break
-            else:
-                print(f"{number2},\t{number1}")
-                break
-        except ValueError as error:
-            print(f"ValueError occurred:{error}")
-            print("Please retry the operation!")
+    num1 = float(input("Please, enter a nuber 1: "))
+    num2 = float(input("Please, enter a number 2: "))
+    symbol = str(input("Enter, a symbol \"+\",\"-\",\"*\",\"/\": "))
+    match symbol:
+        case '+':
+            print("Result = " + str(num1 + num2))
+        case '-':
+            print("Result = " + str(num1 - num2))
+        case '*':
+            print("Result = " + str(num1 * num2))
+        case '/':
+            print("Result = " + str(num1 / num2))
+        case _:
+            print("Invalid input symbol!")
+except ZeroDivisionError as error:
+    print(f"ZeroDivisionError: {error}")
+except ValueError as error:
+    print(f'ValueError occurred :{error}')
 except Exception as error:
     print(f"ExceptionError: {error}")
